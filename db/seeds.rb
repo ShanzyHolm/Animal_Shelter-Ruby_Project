@@ -15,14 +15,3 @@ animal1 = (
 
 binding.pry
 nil
-
-
-
-
-
-CREATE TABLE adoptions
-(
-  id SERIAL8 PRIMARY KEY,
-  animal_id INT references animals(id),
-  owner_id INT references owners(id)
-);
