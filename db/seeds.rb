@@ -18,14 +18,7 @@ nil
 
 
 
-CREATE TABLE owners
-(
-  id SERIAL8 PRIMARY KEY,
-  first_name VARCHAR(255) not null,
-  last_name VARCHAR(255) not null,
-  interest VARCHAR(255),
-  contact_info VARCHAR(255)
-);
+
 
 CREATE TABLE adoptions
 (

@@ -12,6 +12,9 @@ class Animal
     @admission = options['admission']
     @adoptable = options['adoptable']
     @species = options['species']
+    # @breed = options['breed']
+    # @age = options['age'].to_i
+    # @description = options['description']
   end
 
 end
