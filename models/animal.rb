@@ -13,8 +13,9 @@ class Animal
     @adoptable = options['adoptable']
     @species = options['species']
     # @breed = options['breed']
-    # @age = options['age'].to_i
+    # @dob = options['dob']
     # @description = options['description']
+    @image = options['image']
   end
 
 end

@@ -7,9 +7,10 @@ Adoption.delete_all()
 Owner.delete_all()
 Animal.delete_all()
 
-animal1 = (
+animal1 = Animal.new(
   {
-
+    "name" => "Lenny",
+    "admission" =>
   }
 )
 

@@ -9,9 +9,10 @@ CREATE TABLE animals
   admission DATE,
   adoptable BOOLEAN,
   species VARCHAR(255),
-  -- age INT,
+  -- dob DATE,
   -- breed VARCHAR(255),
   -- description TEXT,
+  image VARCHAR(255)
 );
 
 CREATE TABLE owners
