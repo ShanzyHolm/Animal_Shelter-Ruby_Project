@@ -175,23 +175,23 @@ owner7 = Owner.new({
   })
 owner7.save()
 
-adoption1 = Adoption.new({
-  "animal_id" => animal2.id(),
-  "owner_id" => owner7.id()
-  })
-adoption1.save()
-
-adoption2 = Adoption.new({
-  "animal_id" => animal7.id(),
-  "owner_id" => owner4.id()
-  })
-adoption2.save()
-
-adoption3 = Adoption.new({
-  "animal_id" => animal13.id(),
-  "owner_id" => owner2.id()
-  })
-adoption3.save()
+# adoption1 = Adoption.new({
+#   "animal_id" => animal2.id(),
+#   "owner_id" => owner7.id()
+#   })
+# adoption1.save()
+#
+# adoption2 = Adoption.new({
+#   "animal_id" => animal7.id(),
+#   "owner_id" => owner4.id()
+#   })
+# adoption2.save()
+#
+# adoption3 = Adoption.new({
+#   "animal_id" => animal13.id(),
+#   "owner_id" => owner2.id()
+#   })
+# adoption3.save()
 
 binding.pry
 nil
