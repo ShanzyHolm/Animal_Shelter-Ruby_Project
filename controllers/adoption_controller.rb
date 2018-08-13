@@ -1,5 +1,6 @@
 require('sinatra')
 require('sinatra/contrib/all')
+require('pry')
 require_relative('../models/adoption.rb')
 require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
@@ -11,8 +12,8 @@ get '/adoptions' do
 end
 
 get '/adoptions/new' do
-  @owners = Owners.all()
-  @animals = Animals.all()
+  @owners = Owner.all()
+  @animals = Animal.all()
   erb(:"adoptions/new")
 end
 

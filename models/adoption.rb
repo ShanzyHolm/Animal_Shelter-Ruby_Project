@@ -49,7 +49,7 @@ class Adoption
   def self.all()
     sql = "SELECT * FROM adoptions"
     adoptions = SqlRunner.run(sql)
-    results = adoptions.map { |adoption| Adoption.new(adoption) }
+    result = adoptions.map { |adoption| Adoption.new(adoption) }
     return result
   end
 

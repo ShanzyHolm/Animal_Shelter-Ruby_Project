@@ -40,7 +40,7 @@ class Owner
   def self.all()
     sql = "SELECT * FROM owners"
     owners = SqlRunner.run(sql)
-    results = owners.map { |owner| Owner.new(owner) }
+    result = owners.map { |owner| Owner.new(owner) }
     return result
   end
 
