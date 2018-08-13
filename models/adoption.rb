@@ -10,6 +10,7 @@ class Adoption
     @id = options['id'].to_i if options['id']
     @animal_id = options['animal_id'].to_i
     @owner_id = options['owner_id'].to_i
+    # @fee = 50
   end
 
 end

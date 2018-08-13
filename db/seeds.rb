@@ -133,8 +133,65 @@ animal14 = Animal.new({
   })
 animal14.save()
 
+owner1 = Owner.new({
+  "first_name" => "Davvid"
+  "last_name" => "Siron"
+  })
+owner1.save()
+
+owner2 = Owner.new({
+  "first_name" => "Netje"
+  "last_name" => "Roni"
+  })
+owner2.save()
+
+owner3 = Owner.new({
+  "first_name" => "Stephan"
+  "last_name" => "Sob"
+  })
+owner3.save()
+
+owner4 = Owner.new({
+  "first_name" => "Tanya"
+  "last_name" => "Ford"
+  })
+owner4.save()
+
+owner5 = Owner.new({
+  "first_name" => "James"
+  "last_name" => "Craw"
+  })
+owner5.save()
+
+owner6 = Owner.new({
+  "first_name" => "Shennen"
+  "last_name" => "Holder"
+  })
+owner6.save()
+
+owner7 = Owner.new({
+  "first_name" => "Nicole"
+  "last_name" => "VanMeer"
+  })
+owner7.save()
+
+adoption1 = Adoption.new({
+  "animal_id" => animal2.id()
+  "owner_id" => owner7.id()
+  })
+adoption1.save()
+
+adoption2 = Adoption.new({
+  "animal_id" => animal7.id()
+  "owner_id" => owner4.id()
+  })
+adoption2.save()
+
+adoption3 = Adoption.new({
+  "animal_id" => animal13.id()
+  "owner_id" => owner2.id()
+  })
+adoption3.save()
 
 binding.pry
 nil
-
- 
