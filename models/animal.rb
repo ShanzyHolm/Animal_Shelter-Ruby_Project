@@ -58,18 +58,6 @@ class Animal
     SqlRunner.run(sql)
   end
 
-  # def adoption()
-    sql = "SELECT owners.first_name, owners.last_name, animals.name FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id INNER JOIN animals ON animals.id = adoptions.animal_id"
-  #   # sql = "SELECT owners.* FROM owners INNER JOIN adoptions on houses.id = students.house_id WHERE students.id = $1"
-  #   values = [@id]
-  #   result = SqlRunner.run(sql, values)
-  #   return result
-  # end
-  #
-  # SELECT zombies.name, victims.name, bitings.infected_on FROM zombies
-  # INNER JOIN bitings
-  # ON zombies.id = bitings.zombie_id
-  # INNER JOIN victims
-  # ON victims.id = bitings.victim_id;
+
 
 end
