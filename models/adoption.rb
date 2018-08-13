@@ -13,6 +13,13 @@ class Adoption
     # @fee = 50
   end
 
+  def save()
+    sql = "INSERT INTO adoptions (animal_id, owner_id) VALUES ($1, $2) RETURNING id"
+    values = [@animal_id, @owner_id]
+    results = SqlRunner.run(sql, values)
+    @id = results.first(['id']).to_i
+  end
+
 end
 
 

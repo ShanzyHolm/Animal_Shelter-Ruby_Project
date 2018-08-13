@@ -14,6 +14,12 @@ class Owner
     # @contact_info = options['contact_info']
   end
 
+  def save()
+    sql = "INSERT INTO owners (first_name, last_name) VALUES ($1, $2) RETURNING id"
+    values = [@first_name, @last_name]
+    results = SqlRunner.run(sql, values)
+    @id = results.first()['id'].to_i
+  end
 end
 
 
