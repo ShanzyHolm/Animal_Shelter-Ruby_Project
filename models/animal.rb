@@ -4,7 +4,7 @@ class Animal
 
   # attr_reader
   # attr_writer
-  attr_accessor :name, :admission, :adoptable, :species, :image
+  attr_accessor :id, :name, :admission, :adoptable, :species, :image
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -59,7 +59,7 @@ class Animal
   end
 
   # def adoption()
-    sql = "SELECT owners.*, animals.name FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id INNER JOIN animals ON animals.id = adoptions.animals_id"
+    sql = "SELECT owners.first_name, owners.last_name, animals.name FROM owners INNER JOIN adoptions ON owners.id = adoptions.owner_id INNER JOIN animals ON animals.id = adoptions.animal_id"
   #   # sql = "SELECT owners.* FROM owners INNER JOIN adoptions on houses.id = students.house_id WHERE students.id = $1"
   #   values = [@id]
   #   result = SqlRunner.run(sql, values)

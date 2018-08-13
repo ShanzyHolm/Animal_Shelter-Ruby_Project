@@ -4,7 +4,7 @@ class Owner
 
   # attr_reader
   # attr_writer
-  # attr_accessor
+  attr_accessor :first_name, :last_name, :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -22,7 +22,7 @@ class Owner
   end
 
   def update()
-    sql = "UPDATE owners SET (first_name, last_name) = ($1, $2) WHERE id = $6"
+    sql = "UPDATE owners SET (first_name, last_name) = ($1, $2) WHERE id = $3"
     values = [@first_name, @last_name, @id]
     SqlRunner.run(sql, values)
   end
