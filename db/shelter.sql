@@ -6,6 +6,7 @@ CREATE TABLE animals
 (
   id SERIAL8 PRIMARY KEY,
   name VARCHAR(255) not null,
+  -- admission VARCHAR(255),
   admission DATE,
   adoptable BOOLEAN,
   species VARCHAR(255),

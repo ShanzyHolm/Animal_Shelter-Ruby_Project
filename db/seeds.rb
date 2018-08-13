@@ -99,7 +99,7 @@ animal10.save()
 
 animal11 = Animal.new({
     "name" => "Mikey",
-    "admission" => "",
+    "admission" => "2017-06-13",
     "adoptable" => "false",
     "species" => "cat",
     "image" => "Mikey.jpg"
@@ -108,7 +108,7 @@ animal11.save()
 
 animal12 = Animal.new({
     "name" => "Muffin",
-    "admission" => "",
+    "admission" => "2017-11-19",
     "adoptable" => "true",
     "species" => "cat",
     "image" => "Muffin2.jpg"
@@ -117,7 +117,7 @@ animal12.save()
 
 animal13 = Animal.new({
     "name" => "Murray",
-    "admission" => "",
+    "admission" => "2018-10-22",
     "adoptable" => "true",
     "species" => "ferret",
     "image" => "Murray.jpg"
@@ -126,7 +126,7 @@ animal13.save()
 
 animal14 = Animal.new({
     "name" => "Stuart",
-    "admission" => "",
+    "admission" => "1751-02-13",
     "adoptable" => "false",
     "species" => "Dragon",
     "image" => "Stuart.jpg"
