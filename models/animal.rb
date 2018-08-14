@@ -4,7 +4,7 @@ class Animal
 
   # attr_reader
   # attr_writer
-  attr_accessor :id, :name, :admission, :adoptable, :species, :image
+  attr_accessor :id, :name, :admission, :adoptable, :species, :image, :gender, :description
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -12,30 +12,43 @@ class Animal
     @admission = options['admission']
     @adoptable = options['adoptable']
     @species = options['species']
+    @gender = options['gender']
     # @adoption_id = options['adoption_id']
     # @breed = options['breed']
     # @dob = options['dob']
-    # @description = options['description']
+    @description = options['description']
     @image = options['image']
   end
 
   def save()
-    sql = "INSERT INTO animals (name, admission, adoptable, species, image) VALUES ($1, $2, $3, $4, $5) RETURNING id"
-    values = [@name, @admission, @adoptable, @species, @image]
+    sql = "INSERT INTO animals (name, admission, adoptable, species, gender, description, image) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
+    values = [@name, @admission, @adoptable, @species, @gender, @description, @image]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE animals SET (name, admission, adoptable, species,  image) = ($1, $2, $3, $4, $5) WHERE id = $6"
-    values = [@name, @admission, @adoptable, @species, @image, @id]
+    sql = "UPDATE animals SET (name, admission, adoptable, species, gender, description, image) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+    values = [@name, @admission, @adoptable, @species, @gender, @image, @description, @id]
+    SqlRunner.run(sql, values)
+  end
+
+  def update_adoptable()
+    sql = "UPDATE animals SET (adoptable) = ($1) WHERE id = $2"
+    values = [@adoptable, @id]
     SqlRunner.run(sql, values)
   end
 
   def adoptable()
-    sql = "UPDATE animals SET (adoptable) = ($1) WHERE id = $2"
-    values = [@adoptable, @id]
-    SqlRunner.run(sql, values)
+    if @adoptable == "false"
+      return "Sorry #{@name} is not available."
+    else
+      if @gender == "male"
+        return "#{@name} is currently looking for his 'forever home'."
+      else
+          return "#{@name} is currently looking for her 'forever home'."
+      end
+    end
   end
 
   def name()
@@ -71,3 +84,20 @@ class Animal
 
 
 end
+
+
+# def available()
+#   sql = "SELECT adoptable.* FROM animals"
+#   available = SqlRunner.run(sql)
+#   result =
+#   if @adoptable == false
+#     return "Sorry #{@name} is not available."
+#   else
+#     if @gender == "male"
+#       return "#{@name} is currently looking for his 'forever home'."
+#     else
+#         return "#{@name} is currently looking for her 'forever home'."
+#     end
+#   end
+#   return result
+# end

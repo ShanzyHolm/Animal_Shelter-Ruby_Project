@@ -1,0 +1,12 @@
+<form action="/animals/update/<%= @animals.id %>" method="post">
+
+
+  <label for="name">Update Animal Name:</label>
+  <input id="name" type="text" value="<%= @animals.name()%>" name="name">
+
+  <label for="admission">Update Admission Date:</label>
+  <input id="admission" type="date" value="<%= @animals.admission()%>" name="admission">
+
+  <input type="submit" value="Update Information">
+
+</form>

@@ -1,6 +1,28 @@
 <h1>All Animals</h1>
 
-<div class="grid">
+<div id="animals" class="grid">
+<div class="grid-row">
+  <div class="">
+
+  </div>
+<% @animals.each do |animal| %>
+<figure>
+  <img src="/images/<%= animal.image %>" alt="Image of <%= animal.name %>" style="height: 200px;">
+  <figcaption><%= animal.name %></figcaption>
+  <ul>
+    <li> Name: <%= animal.name %> </li>
+    <li> Admission Date: <%= animal.admission %> </li>
+    <li> Status: <%= animal.adoptable %></li>
+    <li> <a href="/animals/<%= animal.id %> ">Show Animal Details</a></li>
+  </ul>
+</figure>
+  <% end %>
+</div>
+</div>
+
+
+
+<!-- <div class="grid">
   <div class="grid-row">
     <div class="cell">
 
@@ -15,18 +37,4 @@
     </div>
   </div>
   <hr />
-  <% end %>
-</div>
-<div id="animals">
-<% @animals.each do |animal| %>
-<figure>
-  <img src="/images/<%= animal.image %>" alt="Image of <%= animal.name %>" style="height: 200px;">
-  <figcaption><%= animal.name %></figcaption>
-  <ul>
-    <li> Name: <%= animal.name %> </li>
-    <li> Admission Date: <%= animal.admission %> </li>
-    <li> <a href="/animal/<%= animal.id() %> ">Show Animal Details</a></li>
-  </ul>
-</figure>
-  <% end %>
-</div>
+  <% end %> -->

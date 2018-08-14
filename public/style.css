@@ -4,6 +4,7 @@
 
 .grid-row {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .cell {

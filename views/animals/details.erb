@@ -1,0 +1,16 @@
+<h1>Information on <%= @animals.name %></h1>
+
+<figure>
+  <img src="/images/<%= @animals.image %>" alt="Image of <%= @animals.name %>" style="height: 200px;">
+  <figcaption></figcaption>
+  <ul>
+    <li> Name: <%= @animals.name %> </li>
+    <li> Admission Date: <%= @animals.admission %> </li>
+    <li> Status: <%= @animals.adoptable %></li>
+    <li> Species: <%= @animals.species %></li>
+    <li> Gender: <%= @animals.gender %></li>
+    <li> Notes: <%= @animals.description %></li>
+  </ul>
+</figure>
+
+<a href="/animals/update/<%= @animals.id %> ">Update Animal Details</a>

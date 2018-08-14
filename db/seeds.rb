@@ -12,6 +12,8 @@ animal1 = Animal.new({
     "admission" => "2017-06-25",
     "adoptable" => "false",
     "species" => "cat",
+    "gender" => "male",
+    "description" => "Hyperactive.  Loves to play.  Will over-eat (even steal food from others) if allowed, so monitor food intake carefully.  Indoor Cat.  Is neutered and microchiped.",
     "image" => "Lenny.jpg"
   })
 animal1.save()
@@ -21,7 +23,9 @@ animal2 = Animal.new({
     "admission" => "2017-03-05",
     "adoptable" => "false",
     "species" => "cat",
-    "image" => "Cassie.jpg"
+    "gender" => "female",
+    "description" => "Received radioactive iodine treatments for thyroid issues.  Very timid.  Does not like being held. Indoor Cat.  Is neutered and microchiped.",
+    "image" => "Cassie3.jpg"
   })
 animal2.save()
 
@@ -30,6 +34,8 @@ animal3 = Animal.new({
     "admission" => "2017-03-12",
     "adoptable" => "false",
     "species" => "cat",
+    "gender" => "female",
+    "description" => "Very timid.  Very quiet.  Likes tight spaces to hide in. Indoor Cat.  Is neutered and microchiped.",
     "image" => "Willow.jpg"
   })
 animal3.save()
@@ -39,6 +45,8 @@ animal4 = Animal.new({
     "admission" => "2017-12-19",
     "adoptable" => "true",
     "species" => "cat",
+    "gender" => "male",
+    "description" => "Has a cyst growing on top of his head, which is regularly drained by a vet.  Cannot be removed due to age and health conditions, as cannot be given anesthetic. Indoor Cat.  Is neutered and microchiped.",
     "image" => "Vinnie.jpg"
   })
 animal4.save()
@@ -48,6 +56,8 @@ animal5 = Animal.new({
     "admission" => "2018-02-02",
     "adoptable" => "false",
     "species" => "cat",
+    "gender" => "male",
+    "description" => "",
     "image" => "Baby.jpg"
   })
 animal5.save()
@@ -57,6 +67,8 @@ animal6 = Animal.new({
     "admission" => "2018-01-10",
     "adoptable" => "false",
     "species" => "dog",
+    "gender" => "male",
+    "description" => "",
     "image" => "Boo.jpg"
   })
 animal6.save()
@@ -66,6 +78,8 @@ animal7 = Animal.new({
     "admission" => "2018-03-14",
     "adoptable" => "true",
     "species" => "bunny",
+    "gender" => "male",
+    "description" => "",
     "image" => "Bununny.jpg"
   })
 animal7.save()
@@ -75,6 +89,8 @@ animal8 = Animal.new({
     "admission" => "2017-11-01",
     "adoptable" => "true",
     "species" => "fox",
+    "gender" => "male",
+    "description" => "",
     "image" => "Freddy1.jpg"
   })
 animal8.save()
@@ -84,6 +100,8 @@ animal9 = Animal.new({
     "admission" => "2018-02-28",
     "adoptable" => "true",
     "species" => "bird",
+    "gender" => "male",
+    "description" => "",
     "image" => "Kevin.jpg"
   })
 animal9.save()
@@ -93,6 +111,8 @@ animal10 = Animal.new({
     "admission" => "2017-08-18",
     "adoptable" => "false",
     "species" => "dog",
+    "gender" => "male",
+    "description" => "",
     "image" => "Anouk4.jpg"
   })
 animal10.save()
@@ -102,6 +122,8 @@ animal11 = Animal.new({
     "admission" => "2017-06-13",
     "adoptable" => "false",
     "species" => "cat",
+    "gender" => "male",
+    "description" => "",
     "image" => "Mikey.jpg"
   })
 animal11.save()
@@ -111,6 +133,8 @@ animal12 = Animal.new({
     "admission" => "2017-11-19",
     "adoptable" => "true",
     "species" => "cat",
+    "gender" => "female",
+    "description" => "Social cat.  In good health.",
     "image" => "Muffin2.jpg"
   })
 animal12.save()
@@ -120,6 +144,8 @@ animal13 = Animal.new({
     "admission" => "2018-10-22",
     "adoptable" => "true",
     "species" => "ferret",
+    "gender" => "male",
+    "description" => "Is quite lazy.  Will bite.  Does not play well with others.",
     "image" => "Murray.jpg"
   })
 animal13.save()
@@ -129,6 +155,8 @@ animal14 = Animal.new({
     "admission" => "1751-02-13",
     "adoptable" => "false",
     "species" => "Dragon",
+    "gender" => "male",
+    "description" => "Currently, undergoing 'Fire-Safety' training.  Needs an owner with quick reflexes.",
     "image" => "Stuart.jpg"
   })
 animal14.save()

@@ -9,3 +9,13 @@ get '/animals/show' do
   @animals = Animal.all()
   erb (:"animals/show")
 end
+
+get '/animals/:id' do
+  @animals = Animal.find(params[:id])
+  erb(:"animals/details")
+end
+
+get '/animals/update/:id' do
+  @animal = Animal.find(params[:id])
+  erb(:update)
+end

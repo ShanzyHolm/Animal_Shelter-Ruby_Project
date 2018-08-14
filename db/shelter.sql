@@ -8,11 +8,12 @@ CREATE TABLE animals
   name VARCHAR(255) not null,
   -- admission VARCHAR(255),
   admission DATE,
-  adoptable BOOLEAN,
+  adoptable VARCHAR(255),
   species VARCHAR(255),
+  gender VARCHAR(255),
   -- dob DATE,
   -- breed VARCHAR(255),
-  -- description TEXT,
+  description TEXT,
   image VARCHAR(255)
 );
 
