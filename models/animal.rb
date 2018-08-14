@@ -32,6 +32,10 @@ class Animal
     SqlRunner.run(sql, values)
   end
 
+  def name()
+    return "#{@name}"
+  end
+
   def delete()
     sql = "DELETE FROM animals WHERE id = $1"
     values = [@id]
