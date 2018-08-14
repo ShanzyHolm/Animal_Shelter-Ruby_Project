@@ -33,32 +33,25 @@ class Adoption
   end
 
   def animal()
-    sql = "SELECT * FROM animals where id = $1"
+    sql = "SELECT * FROM animals WHERE id = $1"
     values = [@animal_id]
     result = SqlRunner.run(sql, values).first()
     return Animal.new(result)
   end
 
   def owner()
-    sql = "SELECT * FROM owners where id = $1"
+    sql = "SELECT * FROM owners WHERE id = $1"
     values = [@owner_id]
     result = SqlRunner.run(sql, values).first()
     return Owner.new(result)
   end
 
-  # def animal_name()
-  #   sql = "SELECT animal.name FROM animals where id = $1"
-  #   values = [@animal_id]
-  #   result = SqlRunner.run(sql, values).first()
-  #   return Animal.new(result)
-  # end
-  #
-  # def owner_name()
-  #   sql = "SELECT owner.first_name, owner.last_name FROM owners where id = $1"
-  #   values = [@owner_id]
-  #   result = SqlRunner.run(sql, values).first()
-  #   return Owner.new(result)
-  # end
+  def self.all_owners()
+    sql = "SELECT * FROM owners"
+    owners = SqlRunner.run(sql)
+    result = owners.map { |owner| Owner.new(owner) }
+    return result
+  end
 
   def self.all()
     sql = "SELECT * FROM adoptions"

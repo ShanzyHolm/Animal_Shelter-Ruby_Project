@@ -18,8 +18,15 @@ get '/adoptions/new' do
 end
 
 post '/adoptions' do
-  adoption = Adoption.new(params)
-  adoption.save()
+  @adoption = Adoption.new(params)
+  @adoption.save()
   redirect to('/adoptions')
   # erb()
+end
+
+get '/adoptions/show' do
+  # @owner = Adoption.all()
+  # @animal = Animal.name()
+  @adoptions = Adoption.all()
+  erb( :"adoptions/show")
 end

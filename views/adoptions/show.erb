@@ -1,0 +1,11 @@
+<h1>All Adoptions</h1>
+
+<% @adoptions.each do |adoption| %>
+  <p> Owner Name: <%= @first_name %> <%= @last_name %> </p>
+  <p> Animal Name: <%= @name %> </p>
+
+
+
+  <p> <a href="/adoptions/<%= adoption.id() %> ">Show Adoption Details</a> </p>
+  <hr />
+<% end %>

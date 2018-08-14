@@ -1,0 +1,15 @@
+<h1>All Animals</h1>
+
+<% @animals.each do |animal| %>
+  <p> Name: <%= animal.name %> </p>
+  <p><%= animal.image %> </p>
+
+
+
+  <p> <a href="/animal/<%= animal.id() %> ">Show Animal Details</a> </p>
+  <hr />
+<% end %>
+
+<!-- get '/images/:file' do
+  send_file File.expand_path(params[:file], settings.public_folder)
+end -->
