@@ -6,10 +6,16 @@ require_relative('../models/animal.rb')
 require_relative('../models/owner.rb')
 also_reload('../models/*')
 
-get '/adoptions' do
-  @adoptions = Adoption.all()
+# get '/adoptions' do
+#   @adoptions = Adoption.all()
+#   erb( :"adoptions/index")
+# end
+
+get '/adoptions/confirm/:id' do
+  @adoption = Adoption.find(params[:id])
   erb( :"adoptions/index")
 end
+
 
 get '/adoptions/new' do
   @owners = Owner.all()
@@ -20,13 +26,11 @@ end
 post '/adoptions' do
   @adoption = Adoption.new(params)
   @adoption.save()
-  redirect to('/adoptions')
+  redirect to ("/adoptions/confirm/#{@adoption.id}")
   # erb()
 end
 
 get '/adoptions/show' do
-  # @owner = Adoption.all()
-  # @animal = Animal.name()
   @adoptions = Adoption.all()
   erb( :"adoptions/show")
 end

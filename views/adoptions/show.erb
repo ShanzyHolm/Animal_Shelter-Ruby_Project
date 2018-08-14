@@ -1,8 +1,8 @@
 <h1>All Adoptions</h1>
 
 <% @adoptions.each do |adoption| %>
-  <p> Owner Name: <%= @first_name %> <%= @last_name %> </p>
-  <p> Animal Name: <%= @name %> </p>
+  <p> Owner Name: <%= adoption.owner.first_name %> <%= adoption.owner.last_name %> </p>
+  <p> Animal Name: <%= adoption.animal.name %> </p>
 
 
 

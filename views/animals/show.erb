@@ -1,15 +1,32 @@
 <h1>All Animals</h1>
 
-<% @animals.each do |animal| %>
-  <p> Name: <%= animal.name %> </p>
-  <p><%= animal.image %> </p>
+<div class="grid">
+  <div class="grid-row">
+    <div class="cell">
 
+      <% @animals.each do |animal| %>
+      <p> Name: <%= animal.name %> </p>
+      <p> Admission Date: <%= animal.admission %> </p>
+      <p> <a href="/animal/<%= animal.id() %> ">Show Animal Details</a> </p>
+    </div>
 
-
-  <p> <a href="/animal/<%= animal.id() %> ">Show Animal Details</a> </p>
+    <div class="cell">
+      <img src="/images/<%= animal.image %>" alt="Image of <%= animal.name %>" height="45">
+    </div>
+  </div>
   <hr />
-<% end %>
-
-<!-- get '/images/:file' do
-  send_file File.expand_path(params[:file], settings.public_folder)
-end -->
+  <% end %>
+</div>
+<div id="animals">
+<% @animals.each do |animal| %>
+<figure>
+  <img src="/images/<%= animal.image %>" alt="Image of <%= animal.name %>" style="height: 200px;">
+  <figcaption><%= animal.name %></figcaption>
+  <ul>
+    <li> Name: <%= animal.name %> </li>
+    <li> Admission Date: <%= animal.admission %> </li>
+    <li> <a href="/animal/<%= animal.id() %> ">Show Animal Details</a></li>
+  </ul>
+</figure>
+  <% end %>
+</div>

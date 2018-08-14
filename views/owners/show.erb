@@ -1,10 +1,10 @@
 <h1>All Potential and Adopted Pet Owners</h1>
 
 <% @owners.each do |owner| %>
-  <p> Name: <%= owner.owner_name %> </p>
+  <p> Name: <%= owner.first_name %> <%= owner.last_name%></p>
 
 
 
-  <p> <a href="/owner/<%= owner.id() %> ">Show Owner Details</a> </p>
+  <p> <a href="/owners/<%= owner.id() %> ">Show Owner Details</a> </p>
   <hr />
 <% end %>

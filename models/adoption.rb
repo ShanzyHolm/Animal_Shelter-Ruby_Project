@@ -61,10 +61,10 @@ class Adoption
   end
 
   def self.find(id)
-    sql = "SELECT * FROM adoption WHERE id = $1"
+    sql = "SELECT * FROM adoptions WHERE id = $1"
     values = [id]
-    adoption = SqlRunner.run(sql, values)
-    result = Adoption.new(adoption).first()
+    adoption = SqlRunner.run(sql, values).first()
+    result = Adoption.new(adoption)
     return result
   end
 

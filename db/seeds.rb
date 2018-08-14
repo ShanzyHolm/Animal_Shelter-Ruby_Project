@@ -197,9 +197,3 @@ adoption3.save()
 
 binding.pry
 nil
-
-# biting3 = Biting.new({
-#   "victim_id" => victim3.id,
-#   "zombie_id" => zombie4.id
-# })
-# biting3.save()
