@@ -28,25 +28,27 @@ class Animal
   end
 
   def update()
-    sql = "UPDATE animals SET (name, admission, adoptable, species, gender, description, image) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
-    values = [@name, @admission, @adoptable, @species, @gender, @image, @description, @id]
+    sql = "UPDATE animals SET (name, admission, adoptable, species, gender, description) = ($1, $2, $3, $4, $5, $6) WHERE id = $7"
+    values = [@name, @admission, @adoptable, @species, @gender,  @description, @id]
     SqlRunner.run(sql, values)
   end
 
-  def update_adoptable()
-    sql = "UPDATE animals SET (adoptable) = ($1) WHERE id = $2"
-    values = [@adoptable, @id]
-    SqlRunner.run(sql, values)
+  def reword_adoptable()
+    if @adoptable == "f"
+      return "no"
+    else @adoptable == "t"
+      return "yes"
+    end
   end
 
-  def adoptable()
-    if @adoptable == "false"
+  def is_adoptable()
+    if @adoptable == "f"
       return "Sorry #{@name} is not available."
     else
       if @gender == "male"
-        return "#{@name} is currently looking for his 'forever home'."
+        return "Available - #{@name} is currently looking for his 'forever home'."
       else
-          return "#{@name} is currently looking for her 'forever home'."
+        return "Available - #{@name} is currently looking for her 'forever home'."
       end
     end
   end

@@ -17,5 +17,11 @@ end
 
 get '/animals/update/:id' do
   @animal = Animal.find(params[:id])
-  erb(:update)
+  erb(:"animals/update")
+end
+
+post '/animals/update/:id' do
+  @animal = Animal.new(params)
+  @animal.update()
+  redirect "http://localhost:4567/animals/show"
 end

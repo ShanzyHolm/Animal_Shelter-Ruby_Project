@@ -4,26 +4,26 @@ class Owner
 
   # attr_reader
   # attr_writer
-  attr_accessor :first_name, :last_name, :id
+  attr_accessor :first_name, :last_name,:contact_info, :id
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
     @first_name = options['first_name']
     @last_name = options['last_name']
     # @interest = options['interest']
-    # @contact_info = options['contact_info']
+    @contact_info = options['contact_info']
   end
 
   def save()
-    sql = "INSERT INTO owners (first_name, last_name) VALUES ($1, $2) RETURNING id"
-    values = [@first_name, @last_name]
+    sql = "INSERT INTO owners (first_name, last_name, contact_info) VALUES ($1, $2, $3) RETURNING id"
+    values = [@first_name, @last_name, @contact_info]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE owners SET (first_name, last_name) = ($1, $2) WHERE id = $3"
-    values = [@first_name, @last_name, @id]
+    sql = "UPDATE owners SET (first_name, last_name, contact_info) = ($1, $2, $3) WHERE id = $4"
+    values = [@first_name, @last_name, @contact_info, @id]
     SqlRunner.run(sql, values)
   end
 

@@ -1,0 +1,15 @@
+<form action="/owners/update/<%= @owner.id %>" method="post">
+
+
+  <label for="first-name">Update Owner's First Name:</label>
+  <input id="first-name" type="text" value="<%= @owner.first_name()%>" name="first_name">
+
+  <label for="last-name">Update Owner's Last Name:</label>
+  <input id="last-name" type="text" value="<%= @owner.last_name()%>" name="last_name">
+
+  <label for="contact-info">Update Contact Details:</label>
+  <input id="contact-info" type="text" value="<%= @owner.contact_info()%>" name="contact_info">
+
+  <input type="submit" value="Update Details">
+
+</form>

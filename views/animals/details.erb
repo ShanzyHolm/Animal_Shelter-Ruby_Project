@@ -6,7 +6,7 @@
   <ul>
     <li> Name: <%= @animals.name %> </li>
     <li> Admission Date: <%= @animals.admission %> </li>
-    <li> Status: <%= @animals.adoptable %></li>
+    <li> Status: <%= @animals.is_adoptable %></li>
     <li> Species: <%= @animals.species %></li>
     <li> Gender: <%= @animals.gender %></li>
     <li> Notes: <%= @animals.description %></li>
@@ -14,3 +14,5 @@
 </figure>
 
 <a href="/animals/update/<%= @animals.id %> ">Update Animal Details</a>
+
+<!-- <a href="/animals/show">Back to All Animals</a> -->

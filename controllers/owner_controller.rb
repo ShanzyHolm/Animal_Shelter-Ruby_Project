@@ -12,5 +12,16 @@ end
 
 get '/owners/:id' do
   @owner = Owner.find(params[:id])
-  erb (:"owners/index")
+  erb (:"owners/details")
+end
+
+get '/owners/update/:id' do
+  @owner = Owner.find(params[:id])
+  erb(:"owners/update")
+end
+
+post '/owners/update/:id' do
+  @owner = Owner.new(params)
+  @owner.update()
+  redirect "http://localhost:4567/owners/show"
 end

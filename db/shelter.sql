@@ -8,7 +8,8 @@ CREATE TABLE animals
   name VARCHAR(255) not null,
   -- admission VARCHAR(255),
   admission DATE,
-  adoptable VARCHAR(255),
+  adoptable BOOLEAN,
+  -- adoptable VARCHAR(255),
   species VARCHAR(255),
   gender VARCHAR(255),
   -- dob DATE,
@@ -22,7 +23,7 @@ CREATE TABLE owners
   id SERIAL8 PRIMARY KEY,
   first_name VARCHAR(255) not null,
   last_name VARCHAR(255) not null,
-  interest VARCHAR(255),
+  -- interest VARCHAR(255),
   contact_info VARCHAR(255)
 );
 

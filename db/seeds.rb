@@ -163,43 +163,50 @@ animal14.save()
 
 owner1 = Owner.new({
   "first_name" => "Davvid",
-  "last_name" => "Siron"
+  "last_name" => "Siron",
+  "contact_info" => "Email: puppy.pal@petmail.com; Phone: "
   })
 owner1.save()
 
 owner2 = Owner.new({
   "first_name" => "Netje",
-  "last_name" => "Roni"
+  "last_name" => "Roni",
+  "contact_info" => "Email: catgirl@hootmail.com; Phone: 0770000007"
   })
 owner2.save()
 
 owner3 = Owner.new({
   "first_name" => "Stephan",
-  "last_name" => "Sob"
+  "last_name" => "Sob",
+  "contact_info" => "Email: s.sob@hootmail.co.uk; Phone: 0740000032"
   })
 owner3.save()
 
 owner4 = Owner.new({
   "first_name" => "Tanya",
-  "last_name" => "Ford"
+  "last_name" => "Ford",
+  "contact_info" => "Email:  ; Phone: 0766066007"
   })
 owner4.save()
 
 owner5 = Owner.new({
   "first_name" => "James",
-  "last_name" => "Craw"
+  "last_name" => "Craw",
+  "contact_info" => "Email:  ; Phone:  "
   })
 owner5.save()
 
 owner6 = Owner.new({
   "first_name" => "Shennen",
-  "last_name" => "Holder"
+  "last_name" => "Holder",
+  "contact_info" => "Email: pet.holder@meowmail.com; Phone: 0712343217"
   })
 owner6.save()
 
 owner7 = Owner.new({
   "first_name" => "Nicole",
-  "last_name" => "VanMeer"
+  "last_name" => "VanMeer",
+  "contact_info" => "Email: nvmeer@petmail.com; Phone: 0797040097"
   })
 owner7.save()
 

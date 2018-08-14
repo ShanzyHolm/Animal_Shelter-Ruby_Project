@@ -1,0 +1,13 @@
+<h1>Owner Information</h1>
+
+<figure>
+  <ul>
+    <li> First Name: <%= @owner.first_name %> </li>
+    <li> Last Name: <%= @owner.last_name %> </li>
+    <br>
+    <li> ID: <%= @owner.id %></li>
+    <li> Contact Details: <%= @owner.contact_info %></li>
+  </ul>
+</figure>
+
+<a href="/owners/update/<%= @owner.id %> ">Update Owner Details</a>

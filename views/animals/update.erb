@@ -1,12 +1,35 @@
-<form action="/animals/update/<%= @animals.id %>" method="post">
+<form action="/animals/update/<%= @animal.id %>" method="post">
 
 
   <label for="name">Update Animal Name:</label>
-  <input id="name" type="text" value="<%= @animals.name()%>" name="name">
+  <input id="name" type="text" value="<%= @animal.name()%>" name="name">
 
   <label for="admission">Update Admission Date:</label>
-  <input id="admission" type="date" value="<%= @animals.admission()%>" name="admission">
+  <input id="admission" type="date" value="<%= @animal.admission()%>" name="admission">
 
-  <input type="submit" value="Update Information">
+  <label for="adoptable">Adoptable?</label>
+  <select id="adoptable" name="adoptable">
+    <option selected="Selected"><%= @animal.reword_adoptable()%></option>
+    <option value="true">yes</option>
+    <option value="false">no</option>
+  </select>
+
+  <label for="species">Update Species:</label>
+  <input id="species" type="text" value="<%= @animal.species()%>" name="species">
+
+  <label for="gender">Update Gender</label>
+  <select id="gender" name="gender">
+    <option selected="Selected"><%= @animal.gender()%></option>
+    <option value="male">male</option>
+    <option value="female">female</option>
+  </select>
+
+  <!-- <label for="gender">Update Gender:</label>
+  <input id="gender" type="text" value="<%= @animal.gender()%>" name="gender"> -->
+
+  <label for="description">Update Description:</label>
+  <input id="description" type="text" value="<%= @animal.description()%>" name="description">
+
+  <input type="submit" value="Update Details">
 
 </form>
