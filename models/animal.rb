@@ -43,7 +43,7 @@ class Animal
 
   def is_adoptable()
     if @adoptable == "f"
-      return "Sorry #{@name} is not available."
+      return "Sorry #{@name} is <b>not available<b>."
     else
       if @gender == "male"
         return "Available - #{@name} is currently looking for his 'forever home'."

@@ -1,3 +1,21 @@
+body {
+  background: white url('/images/background7.jpg');
+  background-size: 100%;
+  background-repeat: repeat-y;
+}
+/* From : https://goo.gl/images/SguqLu */
+
+figure {
+  height: 350px;
+}
+
+#quote {
+  border: 3px solid black;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+}
+
 .grid {
   align-items: center;
 }
@@ -9,7 +27,17 @@
 
 .cell {
   flex: 1;
-  padding: 5px;
+  /* padding: 10px 5px 10px 5px; */
+  margin: 40px 50px 40px 50px;
   text-align: center;
   font-family: serif;
+}
+
+nav {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  font-size: 14pt;
 }

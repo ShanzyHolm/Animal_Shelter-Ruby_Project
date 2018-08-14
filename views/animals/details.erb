@@ -1,18 +1,24 @@
 <h1>Information on <%= @animals.name %></h1>
+<div class="grid">
+  <div class="grid-row">
+    <div class="cell">
+      <figure>
+        <img src="/images/<%= @animals.image %>" alt="Image of <%= @animals.name %>" style="height: 200px;">
+        <figcaption></figcaption>
+        <ul>
+          <li> <strong>Name:</strong> <%= @animals.name %> </li>
+          <li> <strong>Admission Date:</strong> <%= @animals.admission %> </li>
+          <li> <strong>Status: </strong><%= @animals.is_adoptable %></li>
+          <li> <strong>Species:</strong> <%= @animals.species %></li>
+          <li> <strong>Gender:</strong> <%= @animals.gender %></li>
+          <li> <strong>Notes:</strong> <%= @animals.description %></li>
+        </ul>
+        <a href="/animals/update/<%= @animals.id %> ">Update Animal Details</a>
+      </figure>
+    </div>
+  </div>
+</div>
 
-<figure>
-  <img src="/images/<%= @animals.image %>" alt="Image of <%= @animals.name %>" style="height: 200px;">
-  <figcaption></figcaption>
-  <ul>
-    <li> Name: <%= @animals.name %> </li>
-    <li> Admission Date: <%= @animals.admission %> </li>
-    <li> Status: <%= @animals.is_adoptable %></li>
-    <li> Species: <%= @animals.species %></li>
-    <li> Gender: <%= @animals.gender %></li>
-    <li> Notes: <%= @animals.description %></li>
-  </ul>
-</figure>
 
-<a href="/animals/update/<%= @animals.id %> ">Update Animal Details</a>
 
 <!-- <a href="/animals/show">Back to All Animals</a> -->
