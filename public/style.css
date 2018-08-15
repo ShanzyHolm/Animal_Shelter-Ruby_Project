@@ -1,7 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+p {
+  font-size: 15pt;
+}
+
 body {
   background: white url('/images/background7.jpg');
   background-size: 100%;
   background-repeat: repeat-y;
+  align-items: center;
 }
 /* From : https://goo.gl/images/SguqLu */
 
@@ -9,11 +18,14 @@ figure {
   height: 350px;
 }
 
-#quote {
+blockquote {
   border: 3px solid black;
-  font-size: 18px;
+  font-size: 18pt;
   font-style: italic;
   text-align: center;
+  max-width: 700px;
+  width: auto;
+  display: table;
 }
 
 .grid {
@@ -28,9 +40,35 @@ figure {
 .cell {
   flex: 1;
   /* padding: 10px 5px 10px 5px; */
-  margin: 40px 50px 40px 50px;
+  margin: 40px 50px 20px;
   text-align: center;
   font-family: serif;
+}
+
+/* .contact {
+  vertical-align: top;
+} */
+
+.description {
+  width: 500px;
+  word-wrap: break-word;
+  word-break: break-all;
+  height: 80px;
+}
+
+input {
+  font-size: 120%;
+  padding: 5px 5px 5px 30px;
+  margin-bottom: 25px;
+  margin-left: 75px;
+}
+
+select {
+  font: inherit;
+}
+
+textarea {
+  font-size: 120%;
 }
 
 nav {
@@ -40,4 +78,21 @@ nav {
 ul {
   list-style-type: none;
   font-size: 14pt;
+  padding: 0;
+}
+
+a {
+  padding-right: 35px;
+}
+
+hr {
+  border-color: darkseagreen;
+  border-width: thick;
+}
+
+#home {
+  font-size: 16pt;
+  color: black;
+  text-align: center;
+  padding-right: 0
 }

@@ -1,11 +1,18 @@
+<a id="home" href="/">
+  <img src="/images/home1.png" alt="Home" height="80pt">
+  <br>Home
+</a>
+
 <h1>All Adoptions</h1>
 
 <% @adoptions.each do |adoption| %>
   <p> Owner Name: <%= adoption.owner.first_name %> <%= adoption.owner.last_name %> </p>
   <p> Animal Name: <%= adoption.animal.name %> </p>
+  <p> Adoption ID: <%= adoption.id %> </p>
 
 
-
-  <p> <a href="/adoptions/<%= adoption.id() %> ">Show Adoption Details</a> </p>
+  <br>
+  <!-- <p> <a href="/adoptions/<%= adoption.id() %> ">Show Adoption Details</a> </p> -->
   <hr />
+  <br>
 <% end %>

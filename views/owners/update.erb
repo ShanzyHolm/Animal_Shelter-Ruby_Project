@@ -1,15 +1,33 @@
+<a id="home" href="/">
+  <img src="/images/home1.png" alt="Home" height="80pt">
+  <br>Home
+</a>
+<center>
+<h1>Update Owner</h1>
+
 <form action="/owners/update/<%= @owner.id %>" method="post">
 
 
-  <label for="first-name">Update Owner's First Name:</label>
+  <label for="first-name"><strong>Update Owner's First Name:</strong></label>
   <input id="first-name" type="text" value="<%= @owner.first_name()%>" name="first_name">
 
-  <label for="last-name">Update Owner's Last Name:</label>
+  <br>
+
+  <label for="last-name"><strong>Update Owner's Last Name:</strong></label>
   <input id="last-name" type="text" value="<%= @owner.last_name()%>" name="last_name">
 
-  <label for="contact-info">Update Contact Details:</label>
-  <input id="contact-info" type="text" value="<%= @owner.contact_info()%>" name="contact_info">
+  <br>
+<p class="contact">
+  <label for="contact-info"><strong>Update Contact Details:</strong></label>
+  <textarea id="contact-info" name="contact_info" rows="3" cols="80"><%= @owner.contact_info()%></textarea>
+</p>
+
+  <br>
 
   <input type="submit" value="Update Details">
 
 </form>
+</center>
+
+
+<!-- <input id="contact-info" type="text" value="<%= @owner.contact_info()%>" name="contact_info" class="contact_info"> -->

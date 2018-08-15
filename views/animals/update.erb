@@ -1,35 +1,54 @@
+<a id="home" href="/">
+  <img src="/images/home1.png" alt="Home" height="80pt">
+  <br>Home
+</a>
+<center>
 <form action="/animals/update/<%= @animal.id %>" method="post">
 
 
-  <label for="name">Update Animal Name:</label>
+  <label for="name"><strong>Update Animal Name:</strong></label>
   <input id="name" type="text" value="<%= @animal.name()%>" name="name">
 
-  <label for="admission">Update Admission Date:</label>
+  <br>
+
+  <label for="admission"><strong>Update Admission Date:</strong></label>
   <input id="admission" type="date" value="<%= @animal.admission()%>" name="admission">
 
-  <label for="adoptable">Adoptable?</label>
-  <select id="adoptable" name="adoptable">
-    <option selected="Selected"><%= @animal.reword_adoptable()%></option>
-    <option value="true">yes</option>
-    <option value="false">no</option>
-  </select>
+<br>
 
-  <label for="species">Update Species:</label>
+  <label for="species"><strong>Update Species:</strong></label>
   <input id="species" type="text" value="<%= @animal.species()%>" name="species">
 
-  <label for="gender">Update Gender</label>
-  <select id="gender" name="gender">
-    <option selected="Selected"><%= @animal.gender()%></option>
-    <option value="male">male</option>
-    <option value="female">female</option>
-  </select>
-
+<br>
   <!-- <label for="gender">Update Gender:</label>
   <input id="gender" type="text" value="<%= @animal.gender()%>" name="gender"> -->
+<p>
+  <label for="description"><strong>Update Description:</strong></label>
+  <textarea id="description" name="description" rows="8" cols="80"><%= @animal.description()%></textarea>
+</p>
+  <!-- <input id="description" type="text" value="<%= @animal.description()%>" name="description" class="description"> -->
 
-  <label for="description">Update Description:</label>
-  <input id="description" type="text" value="<%= @animal.description()%>" name="description">
+<br>
+
+<label for="adoptable">Adoptable?</label>
+<select id="adoptable" name="adoptable">
+  <option selected="Selected"><%= @animal.reword_adoptable()%></option>
+  <option value="true">yes</option>
+  <option value="false">no</option>
+</select>
+
+<label for="gender">Update Gender</label>
+<select id="gender" name="gender">
+  <option selected="Selected"><%= @animal.gender()%></option>
+  <option value="male">male</option>
+  <option value="female">female</option>
+</select>
+
+<br>
+<br>
+<br>
 
   <input type="submit" value="Update Details">
 
 </form>
+</center>
