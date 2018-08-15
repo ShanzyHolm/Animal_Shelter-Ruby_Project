@@ -1,5 +1,6 @@
 h1 {
   text-align: center;
+  font-family: 'Finger Paint', cursive;
 }
 
 p {
@@ -40,14 +41,14 @@ blockquote {
 .cell {
   flex: 1;
   /* padding: 10px 5px 10px 5px; */
-  margin: 40px 50px 20px;
+  margin: 10px 50px 10px;
   text-align: center;
   font-family: serif;
 }
 
-/* .contact {
+.formtext {
   vertical-align: top;
-} */
+}
 
 .description {
   width: 500px;
@@ -94,5 +95,23 @@ hr {
   font-size: 16pt;
   color: black;
   text-align: center;
-  padding-right: 0
+  padding-right: 0;
+}
+
+#home-title {
+  font-size: 16pt;
+  color: black;
+  text-align: center;
+  padding-right: 0;
+  height: 80pt;
+  width: 80pt;
+  /* display: flex; */
+  /* flex-flow: column-reverse; */
+  /* align-content: flex-end | center; */
+  /* justify-content: center; */
+}
+
+#title {
+  font-family: 'Lemon', cursive;
+  font-size: 30pt;
 }

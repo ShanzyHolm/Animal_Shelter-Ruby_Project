@@ -8,4 +8,6 @@ class AnimalTest < MiniTest::Test
     @animal1 = Animal.new()
   end
 
+
+
 end

@@ -1,12 +1,8 @@
-<a id="home" href="/">
-  <img src="/images/home1.png" alt="Home" height="80pt">
-  <br>Home
-</a>
+<a id="home" href="/"><img src="/images/home1.png" alt="Home" height="80pt"><br>Home</a>
 
-<h1>Congratulations! </h1>
+<h1><b>Congratulations!<b></h1>
 <br>
 <p> <%= @adoption.owner.first_name %> <%= @adoption.owner.last_name %> has successfully adopted <%= @adoption.animal.name %>. </p>
-<p><%= @adoption.animal.adoptable %></p>
 <br>
 <h1>The Adoption is Complete!</h1>
 
@@ -14,5 +10,5 @@
 <p>
   <a href="/adoptions/new">Create Another Adoption</a>
   <a href="/adoptions/show">Show Adoptions</a>
-  <a href="/">Return Home</a>
+  <!-- <a href="/">Return Home</a> -->
 </p>

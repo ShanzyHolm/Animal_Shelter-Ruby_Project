@@ -1,7 +1,5 @@
-<a id="home" href="/">
-  <img src="/images/home1.png" alt="Home" height="80pt">
-  <br>Home
-</a>
+<a id="home" href="/"><img src="/images/home1.png" alt="Home" height="80pt"><br>Home</a>
+
 <center>
 <form action="/animals/update/<%= @animal.id %>" method="post">
 
@@ -22,9 +20,13 @@
 <br>
   <!-- <label for="gender">Update Gender:</label>
   <input id="gender" type="text" value="<%= @animal.gender()%>" name="gender"> -->
-<p>
-  <label for="description"><strong>Update Description:</strong></label>
-  <textarea id="description" name="description" rows="8" cols="80"><%= @animal.description()%></textarea>
+  <style>
+  label textarea {vertical-align: top;}
+  </style>
+
+<p class="formtext">
+  <label for="description"><strong>Update Description:</strong>
+  <textarea id="description" name="description" rows="3" cols="80"><%= @animal.description()%></textarea></label>
 </p>
   <!-- <input id="description" type="text" value="<%= @animal.description()%>" name="description" class="description"> -->
 

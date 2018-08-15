@@ -8,13 +8,13 @@ class Animal
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @name = options['name']
+    @name = options['name'].capitalise
     @admission = options['admission']
-    @adoptable = options['adoptable']
-    @species = options['species']
-    @gender = options['gender']
+    @adoptable = options['adoptable'].downcase
+    @species = options['species'].capitalise
+    @gender = options['gender'].capitalise
     # @adoption_id = options['adoption_id']
-    # @breed = options['breed']
+    @breed = options['breed']
     # @dob = options['dob']
     @description = options['description']
     @image = options['image']
@@ -43,7 +43,7 @@ class Animal
 
   def is_adoptable()
     if @adoptable == "f"
-      return "Sorry, #{@name} is <b>NOT AVAILABLE</b>."
+      return "Sorry, #{@name} is <br><b>NOT AVAILABLE</b>."
     else
       if @gender == "male"
         return "#{@name} is <b>AVAILABLE</b> and currently looking for his 'forever home'."

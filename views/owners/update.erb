@@ -1,7 +1,5 @@
-<a id="home" href="/">
-  <img src="/images/home1.png" alt="Home" height="80pt">
-  <br>Home
-</a>
+<a id="home" href="/"><img src="/images/home1.png" alt="Home" height="80pt"><br>Home</a>
+
 <center>
 <h1>Update Owner</h1>
 
@@ -17,7 +15,7 @@
   <input id="last-name" type="text" value="<%= @owner.last_name()%>" name="last_name">
 
   <br>
-<p class="contact">
+<p class="formtext">
   <label for="contact-info"><strong>Update Contact Details:</strong></label>
   <textarea id="contact-info" name="contact_info" rows="3" cols="80"><%= @owner.contact_info()%></textarea>
 </p>
