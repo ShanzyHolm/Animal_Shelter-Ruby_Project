@@ -96,9 +96,9 @@ animal8 = Animal.new({
     "admission" => "2017-11-01",
     "adoptable" => "true",
     "species" => "fox",
-    "breed" => "",
+    "breed" => "Domesticated Fox",
     "gender" => "male",
-    "description" => "Domesticated ",
+    "description" => "8 months old. Became domesticated by accident. Needs a home where he can be free to run and hunt but also needs a place of safety as he likes the company of humans. Not litter trained yet. Likes chicken, ham and raw eggs. Likes playing with and eating apples.",
     "image" => "Freddy1.jpg"
   })
 animal8.save()
