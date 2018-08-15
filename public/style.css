@@ -91,6 +91,37 @@ hr {
   border-width: thick;
 }
 
+.picture {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#title-footer {
+    align-items: center;
+}
+
+#foot-pic1 {
+  border: 2px solid black;
+  background: url(/images/Girls.jpg);
+  background-color: tan;
+  background-size: 240pt;
+  background-repeat: no-repeat;
+  border-radius: 15px 50px;
+  background-position: center;
+  height: 150pt;
+}
+
+#foot-pic2 {
+  border: 2px solid black;
+  background: url(/images/Mr_Toad.jpg);
+  background-color: tan;
+  background-size: 240pt;
+  background-repeat: no-repeat;
+  border-radius: 15px 50px;
+  background-position: center;
+  height: 150pt;
+}
+
 #home {
   font-size: 16pt;
   color: black;

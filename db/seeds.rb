@@ -12,8 +12,9 @@ animal1 = Animal.new({
     "admission" => "2017-06-25",
     "adoptable" => "false",
     "species" => "cat",
+    "breed" => "Domestic Short Hair",
     "gender" => "male",
-    "description" => "Hyperactive.  Loves to play.  Will over-eat (even steal food from others) if allowed, so monitor food intake carefully.  Indoor Cat.  Is neutered and microchiped.",
+    "description" => "Colour: Black and White Tuxedo.  Hyperactive.  Loves to play.  Will over-eat (even steal food from others) if allowed, so monitor food intake carefully.  Indoor Cat.  Is neutered and microchiped. Current training: How to Train Your Human.",
     "image" => "Lenny.jpg"
   })
 animal1.save()
@@ -23,8 +24,9 @@ animal2 = Animal.new({
     "admission" => "2017-03-05",
     "adoptable" => "false",
     "species" => "cat",
+    "breed" => "Domestic Short Hair",
     "gender" => "female",
-    "description" => "Received radioactive iodine treatments for thyroid issues.  Very timid.  Does not like being held. Indoor Cat.  Is neutered and microchiped.",
+    "description" => "Colour: Black. Received radioactive iodine treatments for thyroid issues.  Very timid.  Does not like being held. Indoor Cat.  Is neutered and microchiped.  Current training: How to Train Your Human; Howling at all Hours of the Night.",
     "image" => "Cassie3.jpg"
   })
 animal2.save()
@@ -34,8 +36,9 @@ animal3 = Animal.new({
     "admission" => "2017-03-12",
     "adoptable" => "false",
     "species" => "cat",
+    "breed" => "Domestic Short Hair",
     "gender" => "female",
-    "description" => "Very timid.  Very quiet.  Likes tight spaces to hide in. Indoor Cat.  Is neutered and microchiped.",
+    "description" => "Colour: Tortoise Shell. Very timid.  Very quiet.  Likes tight spaces to hide in. Indoor Cat.  Is neutered and microchiped.",
     "image" => "Willow.jpg"
   })
 animal3.save()
@@ -45,8 +48,9 @@ animal4 = Animal.new({
     "admission" => "2017-12-19",
     "adoptable" => "true",
     "species" => "cat",
+    "breed" => "Siamese",
     "gender" => "male",
-    "description" => "Has a cyst growing on top of his head, which is regularly drained by a vet.  Cannot be removed due to age and health conditions, as cannot be given anesthetic. Indoor Cat.  Is neutered and microchiped.",
+    "description" => "Colour: Black. Has a cyst growing on top of his head, which is regularly drained by a vet.  Cannot be removed due to age and health conditions, as cannot be given anesthetic. Indoor Cat.  Is neutered and microchiped.",
     "image" => "Vinnie.jpg"
   })
 animal4.save()
@@ -56,8 +60,9 @@ animal5 = Animal.new({
     "admission" => "2018-02-02",
     "adoptable" => "false",
     "species" => "cat",
+    "breed" => "Maine Coone",
     "gender" => "male",
-    "description" => "",
+    "description" => "Born: July 2009.  Current Training:  Toilet Training.",
     "image" => "Baby.jpg"
   })
 animal5.save()
@@ -67,8 +72,9 @@ animal6 = Animal.new({
     "admission" => "2018-01-10",
     "adoptable" => "false",
     "species" => "dog",
+    "breed" => "",
     "gender" => "male",
-    "description" => "",
+    "description" => "Born: 12 October 2015.  Doesn't like to share his toys.  Likes to bark at the postman.",
     "image" => "Boo.jpg"
   })
 animal6.save()
@@ -78,8 +84,9 @@ animal7 = Animal.new({
     "admission" => "2018-03-14",
     "adoptable" => "true",
     "species" => "bunny",
+    "breed" => "",
     "gender" => "male",
-    "description" => "",
+    "description" => "Leash and litter box trained. Loves going outside on adventures on cool days.  Holland Lop Rabbit. Born 29th January 2014. Special needs: senior and needs a low calcium diet. He is a snuggle bug and loves to be picked up and kissed on the nose.",
     "image" => "Bununny.jpg"
   })
 animal7.save()
@@ -89,8 +96,9 @@ animal8 = Animal.new({
     "admission" => "2017-11-01",
     "adoptable" => "true",
     "species" => "fox",
+    "breed" => "",
     "gender" => "male",
-    "description" => "",
+    "description" => "Domesticated ",
     "image" => "Freddy1.jpg"
   })
 animal8.save()
@@ -100,8 +108,9 @@ animal9 = Animal.new({
     "admission" => "2018-02-28",
     "adoptable" => "true",
     "species" => "bird",
-    "gender" => "male",
-    "description" => "",
+    "breed" => "",
+    "gender" => "female",
+    "description" => "Born 13th January 2018 and is a budgie. She bites still as she is young so suggested to be around adults and no children. ",
     "image" => "Kevin.jpg"
   })
 animal9.save()
@@ -111,8 +120,9 @@ animal10 = Animal.new({
     "admission" => "2017-08-18",
     "adoptable" => "false",
     "species" => "dog",
+    "breed" => "",
     "gender" => "male",
-    "description" => "",
+    "description" => "Just underwent surgery and is currently recovering as had broken his leg.",
     "image" => "Anouk4.jpg"
   })
 animal10.save()
@@ -122,8 +132,9 @@ animal11 = Animal.new({
     "admission" => "2017-06-13",
     "adoptable" => "false",
     "species" => "cat",
+    "breed" => "Domestic short hair",
     "gender" => "male",
-    "description" => "",
+    "description" => "Typical cat. 14 years old. Likes to sleep 22 hours a day.  Current training: How to Train Your Human.",
     "image" => "Mikey.jpg"
   })
 animal11.save()
@@ -133,8 +144,9 @@ animal12 = Animal.new({
     "admission" => "2017-11-19",
     "adoptable" => "true",
     "species" => "cat",
+    "breed" => "Domestic short hair",
     "gender" => "female",
-    "description" => "Social cat.  In good health.",
+    "description" => "Indoor Cat.  No claws.  11 years old. Born in the winter time but no certain day known. Special needs: Allergies and licks all her hair off her belly. Doesn't like to be picked up but loves spending time laying on the bed with you at night.",
     "image" => "Muffin2.jpg"
   })
 animal12.save()
@@ -144,8 +156,9 @@ animal13 = Animal.new({
     "admission" => "2018-10-22",
     "adoptable" => "true",
     "species" => "ferret",
+    "breed" => "",
     "gender" => "male",
-    "description" => "Is quite lazy.  Will bite.  Does not play well with others.",
+    "description" => "2 yers old. Can be rambunctious. Not good with young children.  Tendency to bite if they are not handled gently. Can't really be trusted with smaller pets such as mice, rats and even rabbits, if these pets are already part of your family then a ferret is probably not ideal.",
     "image" => "Murray.jpg"
   })
 animal13.save()
@@ -155,8 +168,9 @@ animal14 = Animal.new({
     "admission" => "1751-02-13",
     "adoptable" => "false",
     "species" => "Dragon",
+    "breed" => "Common Great Northern Dragon",
     "gender" => "male",
-    "description" => "Currently, undergoing 'Fire-Safety' training.  Needs an owner with quick reflexes.",
+    "description" => "Currently, undergoing 'Fire-Safety' training.  Needs an owner with quick reflexes.  Kind, loving, loyal. Suffers the from acid reflux. Dislike of having his nails trimmed.",
     "image" => "Stuart.jpg"
   })
 animal14.save()

@@ -13,7 +13,7 @@ CREATE TABLE animals
   species VARCHAR(255),
   gender VARCHAR(255),
   -- dob DATE,
-  -- breed VARCHAR(255),
+  breed VARCHAR(255),
   description TEXT,
   image VARCHAR(255)
 );

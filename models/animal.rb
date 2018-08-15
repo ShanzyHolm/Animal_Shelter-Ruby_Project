@@ -4,15 +4,15 @@ class Animal
 
   # attr_reader
   # attr_writer
-  attr_accessor :id, :name, :admission, :adoptable, :species, :image, :gender, :description
+  attr_accessor :id, :name, :admission, :adoptable, :species, :image, :gender, :description, :breed
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
-    @name = options['name'].capitalise
+    @name = options['name']
     @admission = options['admission']
-    @adoptable = options['adoptable'].downcase
-    @species = options['species'].capitalise
-    @gender = options['gender'].capitalise
+    @adoptable = options['adoptable']
+    @species = options['species']
+    @gender = options['gender']
     # @adoption_id = options['adoption_id']
     @breed = options['breed']
     # @dob = options['dob']
@@ -21,15 +21,15 @@ class Animal
   end
 
   def save()
-    sql = "INSERT INTO animals (name, admission, adoptable, species, gender, description, image) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
-    values = [@name, @admission, @adoptable, @species, @gender, @description, @image]
+    sql = "INSERT INTO animals (name, admission, adoptable, species, breed, gender, description, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id"
+    values = [@name, @admission, @adoptable, @species, @breed @gender, @description, @image]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end
 
   def update()
-    sql = "UPDATE animals SET (name, admission, adoptable, species, gender, description) = ($1, $2, $3, $4, $5, $6) WHERE id = $7"
-    values = [@name, @admission, @adoptable, @species, @gender,  @description, @id]
+    sql = "UPDATE animals SET (name, admission, adoptable, species, breed, gender, description) = ($1, $2, $3, $4, $5, $6, $7) WHERE id = $8"
+    values = [@name, @admission, @adoptable, @species, @breed, @gender,  @description, @id]
     SqlRunner.run(sql, values)
   end
 
