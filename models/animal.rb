@@ -4,7 +4,7 @@ class Animal
 
   # attr_reader
   # attr_writer
-  attr_accessor :id, :name, :admission, :adoptable, :species, :image, :gender, :description, :breed
+  attr_accessor :id, :name, :admission, :adoptable, :species, :breed, :image, :gender, :description
 
   def initialize(options)
     @id = options['id'].to_i if options['id']
@@ -12,9 +12,9 @@ class Animal
     @admission = options['admission']
     @adoptable = options['adoptable']
     @species = options['species']
+    @breed = options['breed']
     @gender = options['gender']
     # @adoption_id = options['adoption_id']
-    @breed = options['breed']
     # @dob = options['dob']
     @description = options['description']
     @image = options['image']
@@ -22,7 +22,7 @@ class Animal
 
   def save()
     sql = "INSERT INTO animals (name, admission, adoptable, species, breed, gender, description, image) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING id"
-    values = [@name, @admission, @adoptable, @species, @breed @gender, @description, @image]
+    values = [@name, @admission, @adoptable, @species, @breed, @gender, @description, @image]
     results = SqlRunner.run(sql, values)
     @id = results.first()['id'].to_i
   end

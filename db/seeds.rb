@@ -108,9 +108,9 @@ animal9 = Animal.new({
     "admission" => "2018-02-28",
     "adoptable" => "true",
     "species" => "bird",
-    "breed" => "",
+    "breed" => "Budgie",
     "gender" => "female",
-    "description" => "Born 13th January 2018 and is a budgie. She bites still as she is young so suggested to be around adults and no children. ",
+    "description" => "Born 13th January 2018.  She bites still as she is young so suggested to be around adults and no children. ",
     "image" => "Kevin.jpg"
   })
 animal9.save()
@@ -174,6 +174,33 @@ animal14 = Animal.new({
     "image" => "Stuart.jpg"
   })
 animal14.save()
+
+animal15 = Animal.new({
+    "name" => "unknown",
+    "admission" => "2018-06-30",
+    "adoptable" => "false",
+    "species" => "Bulldicorn",
+    "breed" => "Cross-breed",
+    "gender" => "female",
+    "description" => "1 year old.  Cross between a bulldog and a unicorn.  A little known fact, Bulldicorns fart rainbows, that smell horrendous!",
+    "image" => "bulldicorn.jpg"
+  })
+animal15.save()
+
+
+animal16 = Animal.new({
+    "name" => "Lord Champ Dempsey",
+    "admission" => "2017-12-23",
+    "adoptable" => "false",
+    "species" => "dog",
+    "breed" => "English Bulldog",
+    "gender" => "male",
+    "description" => "Brindle colouring. Nine years old. Has an ongoing battle against the God of Thunder, Thor. Dempsey feels like he is winning, especially at two in the morning when the rest of the pack is sound asleep and he is preventing Thor from coming into the house.",
+    "image" => "DempseyNew.JPG"
+  })
+animal16.save()
+
+
 
 owner1 = Owner.new({
   "first_name" => "Davvid",
